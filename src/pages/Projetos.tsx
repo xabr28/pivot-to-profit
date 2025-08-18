@@ -56,6 +56,23 @@ const Projetos = () => {
         "Reduziu o tempo de geração de relatórios de RH de 8 horas para 15 minutos.",
         "Permitiu ações preventivas que diminuíram o turnover em 18% no período de 6 meses."
       ]
+    },
+    {
+      id: "manutencao",
+      title: "Dashboard de Manutenção",
+      image: dashboardFinanceiro, // Reutilizando imagem por enquanto
+      ferramentas: ["Power BI", "Excel", "Power Query"],
+      problema: "Uma empresa industrial não conseguia monitorar eficientemente suas atividades de manutenção, resultando em paradas não programadas, custos elevados e baixa disponibilidade dos equipamentos.",
+      acao: "Estruturei um sistema de coleta de dados de manutenção integrando informações de ordens de serviço, histórico de falhas e custos. Criei KPIs essenciais como MTBF (Mean Time Between Failures), MTTR (Mean Time To Repair) e disponibilidade dos equipamentos.",
+      solucao: [
+        "Desenvolvi um dashboard que apresenta uma visão geral das atividades de manutenção com foco em KPIs operacionais.",
+        "Implementei comparação entre manutenção preventiva vs. corretiva, mostrando o impacto de cada estratégia nos custos.",
+        "Criei análises para identificar equipamentos com mais falhas e as principais causas dos problemas, direcionando ações corretivas."
+      ],
+      resultados: [
+        "Reduziu paradas não programadas em 25% através do melhor planejamento de manutenções preventivas.",
+        "Diminuiu custos de manutenção em 20% pela identificação e eliminação de causas raiz dos problemas."
+      ]
     }
   ];
 
