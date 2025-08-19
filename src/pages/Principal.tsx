@@ -2,28 +2,33 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import dashboardFinanceiro from "@/assets/dashboard-financeiro.jpg";
-import dashboardVendas from "@/assets/dashboard-vendas.jpg";
-import dashboardRH from "@/assets/dashboard-rh.jpg";
+
+// Já não precisamos das imagens estáticas aqui se todos os projetos forem iframes
+// import dashboardFinanceiro from "@/assets/dashboard-financeiro.jpg";
+// import dashboardVendas from "@/assets/dashboard-vendas.jpg";
+// import dashboardRH from "@/assets/dashboard-rh.jpg";
 
 const Principal = () => {
+  // --- ESTRUTURA DE DADOS ATUALIZADA ---
+  // Trocamos 'image' por 'iframeSrc' para os links dos dashboards.
+  // Se quiser que um projeto mostre uma imagem, use 'imageSrc'.
   const projetos = [
     {
       title: "Dashboard de Gestão Financeira",
       description: "Reduzi em 15% os custos operacionais através da visualização de dados financeiros.",
-      image: dashboardFinanceiro,
+      iframeSrc: "https://app.powerbi.com/reportEmbed?reportId=609e37e9-4f26-41a7-a243-84248fe8446b&autoAuth=true&ctid=8220a7fd-b042-42ba-8748-e6deac833b45", // SUBSTITUA AQUI
       href: "/projetos"
     },
     {
-      title: "Dashboard de Performance de Vendas", 
+      title: "Dashboard de Performance de Vendas",
       description: "Aumentei a taxa de conversão em 22% através da identificação de padrões de comportamento.",
-      image: dashboardVendas,
+      iframeSrc: "Uhttps://app.powerbi.com/reportEmbed?reportId=949bbfee-32bf-4207-9787-a9b6fdcc2e34&autoAuth=true&ctid=8220a7fd-b042-42ba-8748-e6deac833b4", // SUBSTITUA AQUI
       href: "/projetos"
     },
     {
       title: "Dashboard de Analytics de RH",
       description: "Diminuí o turnover em 18% através de ações preventivas baseadas em dados.",
-      image: dashboardRH,
+      iframeSrc: "https://app.powerbi.com/reportEmbed?reportId=c0169219-e438-49d8-bcd3-e45d0ae5e5b8&autoAuth=true&ctid=8220a7fd-b042-42ba-8748-e6deac833b45", // SUBSTITUA AQUI
       href: "/projetos"
     }
   ];
@@ -47,7 +52,7 @@ const Principal = () => {
               </Button>
             </Link>
             <a
-              href="https://linkedin.com/in/alexandre-catanante"
+              href="https://linkedin.com/in/alexandrecatanante"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -73,17 +78,28 @@ const Principal = () => {
             {projetos.map((projeto, index) => (
               <Card key={index} className="group hover:shadow-elegant transition-smooth overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={projeto.image}
-                      alt={`Dashboard ${projeto.title}`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
-                    />
+                  {/* --- LÓGICA PARA MOSTRAR IFRAME OU IMAGEM --- */}
+                  <div className="aspect-video overflow-hidden bg-gray-200">
+                    {projeto.iframeSrc ? (
+                      <iframe
+                        title={projeto.title}
+                        src={projeto.iframeSrc}
+                        frameBorder="0"
+                        allowFullScreen={true}
+                        className="w-full h-full"
+                      />
+                    ) : (
+                      <img
+                        src={projeto.imageSrc} // Fallback para imagem
+                        alt={`Dashboard ${projeto.title}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
+                      />
+                    )}
                   </div>
                   <div className="p-6">
                     <h4 className="text-xl font-semibold text-foreground mb-3">{projeto.title}</h4>
                     <p className="text-muted-foreground mb-4 leading-relaxed">{projeto.description}</p>
-                    <Link to="/projetos">
+                    <Link to={projeto.href}>
                       <Button variant="outline" className="group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
                         Ver Detalhes
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
