@@ -12,7 +12,7 @@ const Projetos = () => {
     {
       id: "financeiro",
       title: "Dashboard de Gestão Financeira",
-      iframeSrc: "https://app.powerbi.com/reportEmbed?reportId=609e37e9-4f26-41a7-a243-84248fe8446b&autoAuth=true&ctid=8220a7fd-b042-42ba-8748-e6deac833b45", // SUBSTITUA AQUI
+      iframeSrc: "https://app.powerbi.com/view?r=eyJrIjoiZDM0ZTkyNWEtZTJjZi00YzVlLWIzOWYtMmUyMTk0NmNlN2QyIiwidCI6IjgyMjBhN2ZkLWIwNDItNDJiYS04NzQ4LWU2ZGVhYzgzM2I0NSJ9", // SUBSTITUA AQUI
       ferramentas: ["Power BI", "Power Query", "SQL"],
       problema: "Uma entidade pública enfrentava dificuldade para rastrear gastos em tempo real, resultando em estouros de orçamento e falta de visibilidade sobre a alocação de recursos entre diferentes centros de custo.",
       acao: "Utilizei o Power Query para conectar, limpar e transformar os dados brutos de gastos, tratando inconsistências e dados ausentes. Modelei os dados para criar um esquema relacional otimizado para análise. Desenvolvi métricas DAX para calcular KPIs essenciais como \"Orçado vs. Realizado\" e \"Variação Percentual\".",
@@ -29,7 +29,7 @@ const Projetos = () => {
     {
       id: "vendas",
       title: "Dashboard de Performance de Vendas",
-      iframeSrc: "https://app.powerbi.com/reportEmbed?reportId=949bbfee-32bf-4207-9787-a9b6fdcc2e34&autoAuth=true&ctid=8220a7fd-b042-42ba-8748-e6deac833b45", // SUBSTITUA AQUI
+      iframeSrc: "https://app.powerbi.com/view?r=eyJrIjoiY2Y4ZjZmZjQtMDM5Zi00MzhiLTgyNzgtNGE0Nzc1N2Y3YTA4IiwidCI6IjgyMjBhN2ZkLWIwNDItNDJiYS04NzQ4LWU2ZGVhYzgzM2I0NSJ9", // SUBSTITUA AQUI
       ferramentas: ["Power BI", "SQL Server", "DAX"],
       problema: "Uma empresa de varejo não conseguia identificar padrões de vendas por região e produto, perdendo oportunidades de otimização e tendo dificuldades para prever demanda futura.",
       acao: "Integrei dados de vendas de múltiplas fontes usando SQL Server, criando um modelo de dados dimensional. Implementei análises de tendência e sazonalidade usando DAX avançado. Desenvolvi métricas de conversão e lifetime value dos clientes.",
@@ -46,7 +46,7 @@ const Projetos = () => {
     {
       id: "rh",
       title: "Dashboard de Analytics de RH",
-      iframeSrc: "https://app.powerbi.com/reportEmbed?reportId=c0169219-e438-49d8-bcd3-e45d0ae5e5b8&autoAuth=true&ctid=8220a7fd-b042-42ba-8748-e6deac833b45", // SUBSTITUA AQUI
+      iframeSrc: "https://app.powerbi.com/view?r=eyJrIjoiMTg1OWY2NmMtYTlkZC00ZmJkLTk3YzgtYTNiYjQ0YWY4MjhjIiwidCI6IjgyMjBhN2ZkLWIwNDItNDJiYS04NzQ4LWU2ZGVhYzgzM2I0NSJ9", // SUBSTITUA AQUI
       ferramentas: ["Power BI", "Excel", "Power Query"],
       problema: "O departamento de RH gastava horas compilando relatórios manuais sobre turnover, absenteísmo e performance, sem conseguir identificar tendências ou fatores de risco.",
       acao: "Automatizei a coleta de dados de RH usando Power Query, integrando informações de múltiplas planilhas. Criei KPIs específicos para gestão de pessoas e desenvolvi modelos preditivos simples para identificação de riscos de turnover.",
@@ -63,7 +63,7 @@ const Projetos = () => {
     {
       id: "manutencao",
       title: "Dashboard de Manutenção",
-      iframeSrc: "https://app.powerbi.com/reportEmbed?reportId=5e33aaea-f691-491f-8968-4aa510b8565c&autoAuth=true&ctid=8220a7fd-b042-42ba-8748-e6deac833b45", // SUBSTITUA AQUI
+      iframeSrc: "https://app.powerbi.com/view?r=eyJrIjoiM2Q2M2I2MjctZGNhMC00YzBiLTk3MDYtMjRmMTFkNjQwNTRmIiwidCI6IjgyMjBhN2ZkLWIwNDItNDJiYS04NzQ4LWU2ZGVhYzgzM2I0NSJ9", // SUBSTITUA AQUI
       ferramentas: ["Power BI", "Excel", "Power Query"],
       problema: "Uma empresa industrial não conseguia monitorar eficientemente suas atividades de manutenção, resultando em paradas não programadas, custos elevados e baixa disponibilidade dos equipamentos.",
       acao: "Estruturei um sistema de coleta de dados de manutenção integrando informações de ordens de serviço, histórico de falhas e custos. Criei KPIs essenciais como MTBF (Mean Time Between Failures), MTTR (Mean Time To Repair) e disponibilidade dos equipamentos.",
